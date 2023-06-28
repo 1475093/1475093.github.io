@@ -1,0 +1,31 @@
+#keyboard {
+    width: 100%;
+    position: relative;
+}
+.whitekey {
+    width: 10%;
+    height: 500px;
+    display: inline-block;
+    border: 1px solid #000;
+}
+.blackkey {
+    width: 9%;
+    height: 280px;
+    display: inline-block;
+    margin-left: -5%;
+    background-color: #000;
+    color: white;
+
+    position: absolute;
+    top: 0;
+    z-index: 1;
+}
+
+.text {
+    position: absolute;
+    bottom: 10px;
+}
+
+.clickedkey {
+    background-color: yellow;
+}

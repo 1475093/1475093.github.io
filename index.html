@@ -1,15 +1,83 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Page Title</title>
-    <link rel="stylesheet" type="text/css" href="style.css" />
-  </head>
-  <body>
-    <h1>a</h1>
-    <p class="little">b</p>
-    <p class="awesome">c</p>
+<html lang="ja">
 
-    <p id="d">d <span class="little">e</span></p>
-    <p class="great">f</p>
-  </body>
+<head>
+  <meta charset="utf-8">
+  <title>FND17_Takashi Nakado presentation</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="theme-color" content="#000000">
+  <!-- <script src="https://github.com/Tonejs/Tone.js.git"></script> -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tone/14.8.49/Tone.js"></script>
+  <script src="wa.js"></script>
+  <script src="script.js"></script>
+  <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+
+<body>
+  <div id="self-introduction">
+
+  </div>
+
+
+  <div id="article">
+    <h2>Y：やろうとしたこと、やったこと</h2>
+    とりあえずなにか動くものを作ろう、思いアイデア出し。
+    <h3>業務系</h3>
+    <ul>
+      <li>ソーラー発電量推定アプリ：緯度経度と期間で推定発電量を取得できる。</li>
+      <li>タイムカードアプリ：業務の開始終了がワンクリックで。勤怠入力システムとの連携や上司通知も見据えて。</li>
+    </ul>
+    <h3>趣味・実用系</h3>
+    <ul>
+      <li>
+        <font color="red"><i>楽器アプリ：マウス/タッチ/キーボードで演奏できる。</i></font>楽譜を投げたら自動演奏。サンプラー（オートチューン）もできそう。
+      </li>
+      <li>楽譜自動めくりアプリ：フットSW等でテンポ入力して楽譜を自動でめくれってくれる。</li>
+    </ul>
+    <h3>実装にあたって</h3>
+    Tone.jsサンプルコードを参考に、下記の改造。
+    <ol>
+      <li>Chrome新仕様対応（一番大変だった）</li>
+      <li>キーボード拡張</li>
+      <li>発音中のキーを黄色表示</li>
+    </ol>
+    <h2>W：わかったこと</h2>
+    <ul>
+      <li>ペアプロを通した教え教えられる風土。ナビの立場では自分の理解を深め、ドライバの立場では相手の思考から学びを得ることがあった。</li>
+      <li>テスト駆動開発、言葉だけは知っていたが、実際に体験できた。詳細仕様で指示されるよりも処理をイメージしやすかった。</li>
+      <li>プログラム記述をアプリに昇華させるところのイメージができた。</li>
+      <li>helpチャンネルで聞いただけではわからない。エラーメッセージをそのままググったほうが早かった。</li>
+    </ul>
+    <h2>T：次やること(改善点)</h2>
+    <ol>
+      <li>指定したメロディを自動演奏</li>
+      <li>同時発音数を増やす</li>
+      <li>GUIによる音色・エフェクト変更</li>
+    </ol>
+    <br><br><br><br><br><br><br>
+
+
+  </div>
+
+  <div id="keyboard">
+    <title>キーボード</title>
+    <div data-key="65" class="whitekey"><span class="text">C5:a</span></div>
+    <div data-key="87" class="blackkey"><span class="text">C#5:w:</span></div>
+    <div data-key="83" class="whitekey"><span class="text">D5:s</span></div>
+    <div data-key="69" class="blackkey"><span class="text">D#5:e</span></div>
+    <div data-key="68" class="whitekey"><span class="text">E5:d</span></div>
+    <div data-key="70" class="whitekey"><span class="text">F5:f</span></div>
+    <div data-key="84" class="blackkey"><span class="text">F#5:t</span></div>
+    <div data-key="71" class="whitekey"><span class="text">G5:g</span></div>
+    <div data-key="89" class="blackkey"><span class="text">G#5:y</span></div>
+    <div data-key="72" class="whitekey"><span class="text">A5:h</span></div>
+    <div data-key="85" class="blackkey"><span class="text">A#5:u</span></div>
+    <div data-key="74" class="whitekey"><span class="text">B5:j</span></div>
+    <div data-key="75" class="whitekey"><span class="text">C6:k</span></div>
+    <div data-key="79" class="blackkey"><span class="text">C#6:o</span></div>
+    <div data-key="76" class="whitekey"><span class="text">D6:l</span></div>
+
+  </div>
+</body>
+
 </html>
