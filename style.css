@@ -1,13 +1,43 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family:'メイリオ', 'Meiryo','ＭＳ ゴシック','Hiragino Kaku Gothic ProN','ヒラギノ角ゴ ProN W3',sans-serif;
+    width: fit-content;
+    margin: 0 auto;
+}
+
+
+.wrap {
+    padding: 32px 10px 64px;
+    background-color: #54B1E5;
+}
+
+.content {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: #fff;
+}
+
+
 #keyboard {
     width: 100%;
     position: relative;
 }
+
 .whitekey {
     width: 10%;
     height: 500px;
     display: inline-block;
     border: 1px solid #000;
 }
+
 .blackkey {
     width: 9%;
     height: 280px;
@@ -17,15 +47,35 @@
     color: white;
 
     position: absolute;
-    top: 0;
+    top: 1;
     z-index: 1;
 }
 
 .text {
     position: absolute;
-    bottom: 10px;
+    bottom: 50px;
+    font-size: 10px;
+
+
 }
 
 .clickedkey {
     background-color: yellow;
 }
+
+.center{
+    text-align: center;
+
+}
+
+.profile-image {
+    margin: 16px 0 0;
+    text-align: center;
+}
+
+.profile-image img {
+    width: 200px;
+    height: auto;
+    border-radius: 50%;
+}
+
