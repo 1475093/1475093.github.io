@@ -32,14 +32,14 @@ body {
 }
 
 .whitekey {
-    width: 10%;
+    width: 9%;
     height: 500px;
     display: inline-block;
     border: 1px solid #000;
 }
 
 .blackkey {
-    width: 9%;
+    width: 8%;
     height: 280px;
     display: inline-block;
     margin-left: -5%;
