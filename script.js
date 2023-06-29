@@ -79,10 +79,79 @@ function offSound(e) {
 //         //   wa.playSilent(); //Chromeデバッグ用の無音再生
 //         synth.triggerAttackRelease(note, '8n', time);
 //     };
-
-
 // };
 
+const btn = document.getElementById("btn");
+const play = document.getElementById("play");
+const stop = document.getElementById("stop");
 
+//STOPボタン非表示
+stop.style.display = "none"; 
+
+//メロディ
+const melodyLine = [
+  ['0:0:0','c5'],
+  ['0:3:0','G4'],
+  ['1:2:0','E4'],
+  ['2:0:0','A4'],
+  ['2:1.5:0','B4'],
+  ['2:2.8:0','A4'], 
+  ['3:0.2:0','G#4'],
+  ['3:1.6:0','A#4'], 
+  ['3:2.8:0','G#4'],
+  ['4:0:0','G4'], 
+  ['4:0.75:0','F#4'],
+  ['4:1.25:0','G4']
+];
+
+//再生ボタン
+play.addEventListener("click", function () { 
+
+//ボタン表示切替
+play.style.display = "none"; 
+stop.style.display = "block"; 
+
+wa.playSilent(); //Chromeデバッグ用の無音再生
+  
+//音源
+const synth = new Tone.AMSynth().toMaster(); 
+ 
+//8分音符で再生
+function setPlay(time, note) { synth.triggerAttackRelease(note,'8n', time);
+}
+
+//メロディをセット  
+const melody = new Tone.Part(setPlay, melodyLine); 
+
+//メロディ再生
+melody.start();
+
+//ループ（デフォルトでfalse）
+melody.loop = true;
+melody.loopStart = "0";
+melody.loopEnd = "16";
+
+//テンポ
+Tone.Transport.bpm.value = 400;
+  
+//再生実行
+Tone.Transport.start(); 
+
+}, false);
+
+
+//停止ボタン
+stop.addEventListener("click", function () { 
+ 
+//ボタン表示切替
+stop.style.display = "none"; 
+play.style.display = "block"; 
+  
+//停止実行
+Tone.Transport.stop();
+//イベントクリア
+Tone.Transport.cancel();
+
+}, false);
 
 

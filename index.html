@@ -11,48 +11,51 @@
   <script src="wa.js"></script>
   <script src="script.js"></script>
   <link rel="stylesheet" type="text/css" href="style.css" />
+  <link href="https://fonts.googleapis.com/earlyaccess/nicomoji.css" rel="stylesheet">
 </head>
 
 <body class="wrap">
-  <div id="self-introduction">
-    <h1 class="center content">Profile</h1>
+
+  <div class="content" id="self-introduction">
+
+    <h1 class="center content">'23/7/3<br>Programming Foundation FND17 PRESENTATION<br><br>
+      <u>Profile</u>
+    </h1>
     <h2 class="center content">中堂　敬司</h2>
     <figure class="profile-image">
       <img src="nigaoe.jpg" width="20%">
     </figure>
-    <h2 class="center content">自己紹介</h2>
-    <p class="content">電技で車載ソーラー充電システム開発を担当している薬学部出身の38歳エンジニア。<br>
+    <!-- <h2 class="center content">自己紹介</h2> -->
+    <ul>
+      <li>電技で車載ソーラー充電システム開発を担当している薬学部出身の38歳エンジニア。</li>
       <!-- 名字が珍しく、アンナチュラルで役名で出てきたときはちょっとウホッてなりました。<br> -->
-      大阪府箕面市（キタの方）出身で、プライベートではめっちゃ関西弁。<br>
-      趣味は音楽（昨日ライブでした）、旅行（なんだかんだ日本が一番）、<br>勉強（MBAホルダー。上の絵はクラスメートが書いてくれました）
-    </p>
-
-
-
+      <li>大阪府箕面市（キタの方）出身で、プライベートではめっちゃ関西弁。</li>
+      <li>趣味は音楽（日曜ライブです）、旅行（なんだかんだ日本が一番）、<br>勉強（MBAとかギター製作とか。上の絵はクラスメートが書いてくれました）</li>
+    </ul>
   </div>
 
 
-  <div class = "content" id="article">
-    <h1 class="center content">Report</h1>
+  <div class="content" id="article">
+    <h1 class="center content"><u>Report</u></h1>
     <h2 class="center content">Y：やろうとしたこと、やったこと</h2>
     <p class="center content">とりあえずなにか動くものを作ろう、思いアイデア出し。</p>
     <h3 class="center content">業務系</h3>
-    <ul  class="content">
+    <ul class="content">
       <li>ソーラー発電量推定アプリ：緯度経度と期間で推定発電量を取得できる。</li>
-      <li>タイムカードアプリ：業務の開始終了がワンクリックで。<br>勤怠入力システムとの連携や上司通知も見据えて。</li>
+      <li>タイムカードアプリ：業務の開始終了がワンクリックで。<br>　　　　　　　　　　勤怠入力システムとの連携や上司通知も見据えて。</li>
     </ul>
     <h3 class="center content">趣味・実用系</h3>
-    <ul  class="content">
+    <ul class="content">
       <li>
         <font color="red"><b>楽器アプリ：マウス/タッチ/キーボードで演奏できる。</b></font><br>楽譜を投げたら自動演奏。サンプラー（オートチューン）もできそう。
       </li>
       <li>楽譜自動めくりアプリ：フットSW等でテンポ入力して楽譜を自動でめくれってくれる。</li>
     </ul>
-    <p class="center content">せっかくなので趣味に走ろう、音を出してみたい、<br>外部装置とのIF(たぶんMIDI)は骨が折れそうということでピアノアプリをつくることにした。</p>
+    <p class="center content">せっかくなので<b>趣味に走ろう、音を出してみたい</b>、<br>外部装置とのIF(たぶんMIDI)は骨が折れそうということでピアノアプリをつくることにした。</p>
     <h3 class="center content">実装にあたって</h3>
     <p class="center content">目標はFFの戦闘終了のファンファーレ レレレレーシ♭ードーレッドレー を演奏する。<br>
-    Tone.jsサンプルコードを参考に、下記を追加。</p>
-    <ol  class="content">
+      Tone.jsサンプルコードを参考に、下記を追加。</p>
+    <ol class="content">
       <li>Chrome新仕様対応（一番大変だった）</li>
       <li>D6までキーボード拡張</li>
       <li>レスポンスの向上(音価を半減)</li>
@@ -61,30 +64,30 @@
       <li>WebSlidesをつかって資料作成　←ピアノアプリ表示がうまくいかず、できなかった</li>
     </ol>
     <h2 class="center content">W：わかったこと</h2>
-    <ul  class="content">
+    <ul class="content">
       <li>ペアプロを通した教え教えられる風土。<br>ナビでは自分の理解を深め、ドライバでは相手の思考から学びを得ることがあった。</li>
       <li>"テスト駆動開発"、言葉だけは知っていたが、実際に体験できた。<br>詳細仕様で指示されるよりも処理をイメージしやすかった。</li>
       <li>プログラム記述をアプリに昇華させるところのイメージができた。</li>
       <li>helpチャンネルで聞いただけではわからない。<br>エラーメッセージをそのままググったほうが早かった。</li>
       <li>if/forループ使わずに組めると気持ちいい</li>
       <li>卒研製作、いくらでもやることがあって、どれだけ時間があっても足りない</li>
-      
     </ul>
     <h2 class="center content">T：次やること(改善点)</h2>
     <ol class="content">
-      <li>同時発音数を増やす。</li>
-      <li>GUIによる音色・エフェクト変更。ノブのデザインとか凝りたい。</li>
+      <li>iPhone*Safariで音が鳴らない問題を解決</li>
+      <li>タッチ操作時に選択した鍵盤が黄色にならない問題を解決</li>
+      <li>同時発音数を増やす</li>
+      <li>GUIによる音色・エフェクト変更。ノブのデザインとか凝りたい</li>
       <li>音名の配列を入力して自動演奏。音価のパラメータ追加が必要？</li>
       <li>外部音源を特定のキーにアサインして（任意、もしくはRPCA）<br>スケール構成して演奏できるようにする（＝オートチューン）</li>
-      <li>ベースのGUIでも作ってみる。ポジションのスライドが難しそう。</li>
+      <li>ベースのGUIでも作ってみる。ポジションのスライドが難しそう</li>
       <li>PS5を開封してFF16！</li>
     </ol>
     <br>
-
   </div>
 
 
-  <div class = "center content" id="keyboard">
+  <div class="center content nicomoji" id="keyboard">
     <h1>キーボードアプリ</h1>
     <div data-key="65" class="whitekey"><span class="text">C5:a</span></div>
     <div data-key="87" class="blackkey"><span class="text">C#5:w:</span></div>
@@ -101,13 +104,18 @@
     <div data-key="75" class="whitekey"><span class="text">C6:k</span></div>
     <div data-key="79" class="blackkey"><span class="text">C#6:o</span></div>
     <div data-key="76" class="whitekey"><span class="text">D6:l</span></div>
-
   </div>
 
   <!-- <div id="melodybox">
     <input id="melody" type="array">
     <button id="button" type="button">Play!</button>
   </div> -->
+  <!-- 
+<div class="content" id="btn">
+   <div id="play">Play</div>
+   <div id="stop">Stop</div>
+</div>
+ -->
 
 </body>
 
