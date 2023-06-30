@@ -4,13 +4,18 @@
     box-sizing: border-box;
 }
 
+@font-face {
+    font-family: 'NicoKaku';
+    /* フォント名 */
+    /* フォーマットごとにパスを指定 */
+    src: url('nicokaku_v2.ttf');
+}
 
 body {
-    font-family:"Comic Sans MS", 'メイリオ', 'Meiryo','ＭＳ ゴシック','Hiragino Kaku Gothic ProN','ヒラギノ角ゴ ProN W3',sans-serif;
+    font-family: 'メイリオ', 'Meiryo', 'ＭＳ ゴシック', 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3', sans-serif, "Comic Sans MS", ;
     width: fit-content;
     margin: 0 auto;
 }
-
 
 .wrap {
     padding: 32px 10px 64px;
@@ -25,7 +30,32 @@ body {
     background-color: #fff;
 }
 
+h1 {
+    font-family: "NicoKaku";
+}
 
+.center {
+    text-align: center;
+}
+
+.profile-image {
+    margin: 16px 0 0;
+    text-align: center;
+}
+
+.profile-image img {
+    width: 200px;
+    height: auto;
+}
+
+.nicomoji {
+    font-family: 'Nico Moji';
+}
+
+
+
+
+/* ピアノ関連 */
 #keyboard {
     width: 100%;
     position: relative;
@@ -56,65 +86,8 @@ body {
     bottom: 50px;
     font-size: 12px;
 
-
 }
 
 .clickedkey {
     background-color: yellow;
 }
-
-.center{
-    text-align: center;
-
-}
-
-.profile-image {
-    margin: 16px 0 0;
-    text-align: center;
-}
-
-.profile-image img {
-    width: 200px;
-    height: auto;
-    border-radius: 50%;
-}
-
-.nicomoji {
-    font-family: 'Nico Moji';
-}
-
-/* Webフォントを定義 */
-@font-face {
-    font-family: 'NicoKaku'; /* フォント名 */
-    /* フォーマットごとにパスを指定 */
-    src: url('nicokaku_v2.ttf');
-  }
-
-  h1 {
-    font-family:"NicoKaku";
-  }
-
-
-  #btn {
-    display: flex;
-    justify-content: center;
-  }
-  
-  #btn div {
-    font-size: 25px;
-    line-height: 1em;
-    background: #eee;
-    border: 2px solid #ccc;
-    border-radius: 10px;
-    text-align: center;
-    width: 90px;
-    padding: 30px 0;
-    display: block;
-    margin: 0 10px;
-    /* drop-shadow: 10px; */
-  }
-  
-  #btn div:hover {
-    opacity: 0.7;
-    cursor: pointer;
-  }
